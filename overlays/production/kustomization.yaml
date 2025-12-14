@@ -15,6 +15,6 @@ patches:
     kind: Dragonfly
 - patch: |-
     - op: remove
-    path: /
+    path: ../../base/
   target:
     kind: Dragonfly
