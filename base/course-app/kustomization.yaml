@@ -3,7 +3,6 @@ kind: Kustomization
   
 resources:
   - app-config.yaml
-  - course-app/course-app.yaml
-  - course-app/ingress.yaml
-  - course-app/course-app-hpa.yaml
-  - dragonfly/dragonfly.yaml
+  - course-app.yaml
+  - ingress.yaml
+  - course-app-hpa.yaml
