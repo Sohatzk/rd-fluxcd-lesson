@@ -5,7 +5,6 @@ metadata:
   labels:
     app: course-app
 spec:
-  replicas: 10
   selector:
     matchLabels:
       app: course-app

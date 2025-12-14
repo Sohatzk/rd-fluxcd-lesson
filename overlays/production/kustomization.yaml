@@ -7,9 +7,10 @@ resources:
 - namespace.yaml
 
 patches: 
+- path: course-app-deployment.yaml
 - patch: |-
     - op: add
       path: /spec/replicas
-      value: 1
+      value: 2
   target:
-    kind: Deployment
+    kind: Dragonfly
