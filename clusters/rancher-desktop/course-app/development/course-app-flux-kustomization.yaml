@@ -9,6 +9,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: "../../../../overlays/development"
+  path: "../../../../overlays/development/"
   prune: true
   timeout: 1m
