@@ -2,9 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
   
 resources:
-- ../../base/course-app/
-- ../../base/app-config.yaml
-- ../../base/kustomization.yaml
+- ../../base/
 - namespace.yaml
 
 patches: 
@@ -13,5 +11,10 @@ patches:
     - op: add
       path: /spec/replicas
       value: 2
+  target:
+    kind: Dragonfly
+- patch: |-
+    - op: remove
+    path: /
   target:
     kind: Dragonfly
