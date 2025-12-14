@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - ../../base/course-app/
 - ../../base/app-config.yaml
+- ../../base/kustomization.yaml
 - namespace.yaml
 
 patches: 
