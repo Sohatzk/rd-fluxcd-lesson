@@ -4,4 +4,4 @@ metadata:
   name: app-config
 data:
   APP_STORE: redis
-  APP_REDIS_URL: redis://dragonfly-operator-system.dragonfly-sample:6379/0
+  APP_REDIS_URL: redis://dragonfly-sample.dragonfly-operator-system.svc.cluster.local:6379
