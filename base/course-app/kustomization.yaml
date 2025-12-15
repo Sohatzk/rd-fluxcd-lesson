@@ -6,3 +6,9 @@ resources:
   - course-app.yaml
   - ingress.yaml
   - course-app-hpa.yaml
+
+configMapGenerator:
+  - name: app-config
+    literals:
+      - APP_STORE=redis
+      - APP_REDIS_URL=redis://dragonfly-sample.dragonfly-operator-system:6379/0
