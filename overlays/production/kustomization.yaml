@@ -18,12 +18,6 @@ patches:
       path: /metadata/namespace
       value: production
   target:
-    kind: Deployment
-- patch: |-
-    - op: replace
-      path: /metadata/namespace
-      value: production
-  target:
     kind: Service
 - patch: |-
     - op: replace
