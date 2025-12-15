@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - ../../base/course-app
 - namespace.yaml
+- course-app-hpa.yaml
 
 patches: 
 - path: course-app-deployment.yaml

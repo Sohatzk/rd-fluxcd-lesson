@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
   - course-app.yaml
   - ingress.yaml
-  - course-app-hpa.yaml
 
 configMapGenerator:
   - name: app-config
