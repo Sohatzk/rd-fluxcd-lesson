@@ -13,3 +13,21 @@ patches:
       value: 2
   target:
     kind: Dragonfly
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Deployment
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Service
+- patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Ingress
