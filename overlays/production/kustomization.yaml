@@ -10,6 +10,12 @@ patches:
 - path: course-app-deployment.yaml
 - patch: |-
     - op: add
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Deployment
+- patch: |-
+    - op: add
       path: /spec/replicas
       value: 2
   target:
@@ -20,6 +26,7 @@ patches:
       value: production
   target:
     kind: Service
+    name: course-app-service
 - patch: |-
     - op: replace
       path: /spec/ports/0/port

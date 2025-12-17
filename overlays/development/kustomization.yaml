@@ -5,3 +5,10 @@ resources:
 - ../../base/course-app/
 - namespace.yaml
 
+patches:
+- patch: |-
+    - op: add
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Deployment
