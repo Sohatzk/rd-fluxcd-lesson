@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: course-app-deployment
   namespace: production
 spec:
   replicas: 3

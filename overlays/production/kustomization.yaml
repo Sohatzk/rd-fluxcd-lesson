@@ -3,9 +3,6 @@ kind: Kustomization
   
 resources:
 - ../../base/course-app
-- course-app-deployment.yaml
-- course-app-service.yaml
-- course-app-ingress.yaml
 - namespace.yaml
 - course-app-hpa.yaml
 
