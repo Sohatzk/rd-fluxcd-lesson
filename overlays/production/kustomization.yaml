@@ -4,12 +4,24 @@ kind: Kustomization
 resources:
 - ../../base/course-app
 - namespace.yaml
+- course-app-ingress.yaml
 - course-app-hpa.yaml
 
 patches: 
 - path: course-app-deployment.yaml
 - path: course-app-service.yaml
-- path: course-app-ingress.yaml
+- patch: |-
+    - op: add
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Deployment
+- patch: |-
+    - op: add
+      path: /metadata/namespace
+      value: production
+  target:
+    kind: Service
 - patch: |-
     - op: add
       path: /spec/replicas
