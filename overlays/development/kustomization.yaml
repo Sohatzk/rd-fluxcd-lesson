@@ -2,13 +2,21 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
   
 resources:
-- ../../base/course-app/
+- ../../base/course-app
+- course-app-ingress.yaml
 - namespace.yaml
 
 patches:
+- path: course-app-ingress.yaml
 - patch: |-
     - op: add
       path: /metadata/namespace
-      value: production
+      value: development
   target:
     kind: Deployment
+- patch: |-
+    - op: add
+      path: /metadata/namespace
+      value: development
+  target:
+    kind: Service
