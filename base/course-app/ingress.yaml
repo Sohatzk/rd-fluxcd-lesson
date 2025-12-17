@@ -7,10 +7,10 @@ spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - course-app.local
+        - course-app.local.dev
       secretName: course-app-tls
   rules:
-    - host: course-app.local
+    - host: course-app.local.dev
       http:
         paths:
           - path: /
