@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: course-app-ingress
   namespace: development
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   ingressClassName: traefik
   tls:
